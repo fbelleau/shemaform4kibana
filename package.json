@@ -1,0 +1,7 @@
+{
+  "name": "schemaform-kibana-plugin",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular-schema-form": "0.8.13"
+  }
+}

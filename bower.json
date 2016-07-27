@@ -1,0 +1,33 @@
+{
+  "name": "schemaform-kibana-plugin",
+  "description": "Kibana Schemaform Plugin Widget",
+  "main": "index.js",
+  "authors": [
+    "Omer Roland <omeroland@omeroland.net>"
+  ],
+  "license": "Apache 2.0",
+  "keywords": [
+    "kibana",
+    "angular",
+    "plugin",
+    "widget",
+    "omeroland",
+    "schemaform"
+  ],
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "ace-builds": "1.2.3",
+    "angular-ui-ace": "0.2.3",
+    "angular-schema-form": "0.8.7"
+  },
+  "resolutions": {
+    "angular-schema-form": ">= 0.8.7",
+    "tv4": "~1.0.15",
+    "angular": "1.5.8"
+  }
+}

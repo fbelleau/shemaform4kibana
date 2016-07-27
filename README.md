@@ -8,4 +8,4 @@ for the Angular Schema Form project
 http://schemaform.io/
 
 
-<img src="shemaform4kibana/Capturekiba1.PNG" />
+<img src="../shemaform4kibana/Capturekiba1.PNG" />

@@ -7,4 +7,5 @@ for the Angular Schema Form project
 
 http://schemaform.io/
 
-l
+
+<img src="" />

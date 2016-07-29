@@ -1,0 +1,32 @@
+@import (reference) "~ui/styles/mixins.less";
+
+
+
+.angular-vis {
+  padding: 1em;
+  width: 100%;
+}
+
+.vis-editor-sidebar {
+  max-width: 400px;
+}
+
+.html-angular-editor {
+  min-height: 400px;
+  min-width: 500px;
+  font-size: 14px !important;
+}
+
+.vis-editor {
+  &.vis-type-markdown {
+    .visualization-options {
+      .flex-parent();
+      flex: 1 1 auto;
+
+      textarea {
+        flex: 1 1 auto;
+        resize: none;
+      }
+    }
+  }
+}

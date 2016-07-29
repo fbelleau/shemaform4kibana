@@ -1,0 +1,106 @@
+<div ng-controller="SchemaformVisController" class="angular-vis">
+
+    <div ng-repeat="doc in docs">
+        <div class="panel-group" id="accordion{{doc.id}}" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne{{doc.id}}">
+                    <h4 class="panel-title">
+                        <a role="button"
+                           data-toggle="collapse"
+                           data-parent="#accordion{{doc.id}}"
+                           href="#{{doc.id}}"
+                           aria-expanded="false"
+                           aria-controls="{{doc.id}}">
+                            <strong>{{doc.id}}</strong>
+                        </a>
+                    </h4>
+                </div>
+                <div id="{{doc.id}}" class="panel-collapse collapsing" role="tabpanel" aria-labelledby="headingOne{{doc.id}}">
+                    <div class="panel-body">
+                        <div>
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class=""><a href="#home{{doc.id}}"
+                                                                    aria-controls="home{{doc.id}}"
+                                                                    role="tab"
+                                                                    data-toggle="tab">JSON</a></li>
+                                <li role="presentation">
+                                    <a href="#profile{{doc.id}}"
+                                       aria-controls="profile{{doc.id}}"
+                                       role="tab"
+                                       data-toggle="tab">Formulaire
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home{{doc.id}}">
+                                    <div ui-ace="{theme:'sqlserver',mode:'json',onLoad: aceLoaded}" readonly
+                                         class="html-angular-editor" ng-model="modelDoc[doc.id]" ng-value="doc">
+                                    </div>
+
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile{{doc.id}}">
+                                    <form name="form_global{{doc.id}}"
+                                          sf-schema="vis.params.schema"
+                                          sf-form="vis.params.form"
+                                          sf-model="modelDoc[doc.id]">
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--<div class="container">
+
+        <div class="row">
+            <div class="col-md-2">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Document</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10">
+                <form name="form_global"
+                    sf-schema="vis.params.schema"
+                    sf-form="vis.params.form"
+                    sf-model="model" sf-options="{formDefaults: {ngModelOptions:{ updateOn: 'blur'} }}"
+                    ng-submit="onSubmit(form_global)">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+            </div>
+        </div>
+
+    </div>-->
+
+
+
+
+
+</div>
